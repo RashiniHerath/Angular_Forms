@@ -1,23 +1,26 @@
 <div class="container-fluid">
   <h1>Bootcamp Enrollment Form</h1>
-  <form>
+  <form #userForm="ngForm">
+
+    {{userForm.value | json}}
+
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="username" ngModel>
     </div>
 
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" class="form-control">
+      <input type="email" class="form-control"name="email" ngModel>
     </div>
 
     <div class="form-group">
-      <label for="phone">Phone</label>
-      <input type="tel" class="form-control">
+      <label for="Contact number">Contact number</label>
+      <input type="tel" class="form-control"name="contact number"ngModel>
     </div>
 
     <div class="form-group">
-      <select class="fcustom-select">
+      <select class="fcustom-select"name="topic" ngModel>
         <option selected>I am interested in</option>
         <option *ngFor="let topic of topics">{{topic}}</option>
       </select>
@@ -26,18 +29,18 @@
     <div class="MB-3">
       <label>Time preference</label>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="timePreference" value="morning">
+        <input class="form-check-input" ngModel type="radio" name="timePreference" value="morning">
         <label class="form-check-label">Morning (9AM - 12PM)</label>
       </div>
-      
+
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="timePreference" value="evening">
+        <input class="form-check-input" ngModel type="radio" name="timePreference" value="evening">
         <label class="form-check-label">Evening (5PM - 8PM)</label>
       </div>
 
 
       <div class="form-check mb-3">
-        <input class="form-check-input" type="checkbox">
+        <input class="form-check-input"name="subscribe"ngModel type="checkbox">
         <label class="form-check-label">
           Send me promotional offers
         </label>
@@ -48,3 +51,6 @@
     </div>
   </form>
 </div>
+
+
+// In tdf we have  3 directives ngForm,ngModel,ngModelGroup
