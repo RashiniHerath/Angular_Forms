@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './user';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   topics =['Angular','React','Vue']; //property
+
+  userModel = new User('Rob','Johnson@gmail.com', 7708909786, 'Angular', 'Morning', true);//class instance
 }
