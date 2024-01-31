@@ -7,8 +7,21 @@ import { User } from './user';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  topics =['Angular','React','Vue']; //property
+  validateTopicPlaceholder() {
+    throw new Error('Method not implemented.');
+  }
 
-  userModel = new User('','Johnson@gmail.com', 7708909786, 'Angular', 'Morning', true);//class instance
-name: any;
+  topics = ['Angular', 'React', 'Vue']; //property
+  topicHasError = true;
+
+  userModel = new User('', 'Johnson@gmail.com', 7708909786, '', 'Morning', true); //class instance
+  name: any;
+
+  validateTopic(value: any) {
+    if (value === 'default') {
+      this.topicHasError = true;
+    } else {
+      this.topicHasError = false;
+    }
+  }
 }
