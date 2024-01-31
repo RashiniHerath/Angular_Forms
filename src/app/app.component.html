@@ -2,14 +2,19 @@
   <h1>Bootcamp Enrollment Form</h1>
   <form #userForm="ngForm">
 
-    {{ userForm.value | json }}
-    <hr/>
-    {{ userModel | json }}
+ <!--
+{{ userForm.value | json }}
+<hr/>
+{{ userModel | json }}
+-->
 
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" class="form-control" name="username" [(ngModel)]="userModel.name"> //2way binding
     </div>
+     
+    
+    {{name.className}}
 
     <div class="form-group">
       <label for="email">Email</label>
