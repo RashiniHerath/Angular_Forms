@@ -8,7 +8,7 @@ import { User } from './user'; // Import User if it's defined in a separate file
 })
 export class EnrollmentService {
 
-  _url = 'your_api_endpoint'; // Provide the URL where you want to send the POST request
+  _url = 'http://localhost:3000/enroll'; // Provide the URL where you want to send the POST request
 
   constructor(private _http: HttpClient) { } // Inject HttpClient
 

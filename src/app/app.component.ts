@@ -14,6 +14,7 @@ export class AppComponent {
 
   topics = ['Angular', 'React', 'Vue']; //property
   topicHasError = true;
+  submitted=false;
 
   userModel = new User('', 'Johnson@gmail.com', 7708909786, '', 'Morning', true); //class instance
   name: any;
@@ -28,6 +29,7 @@ export class AppComponent {
     }
   }
   onSubmit(){
+    this.submitted=true;
     this. _enrollmentService.enroll(this.userModel)
     .subscribe
     ((data: any) => console.log("Data", data),
