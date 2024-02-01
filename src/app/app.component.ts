@@ -15,6 +15,7 @@ export class AppComponent {
   topics = ['Angular', 'React', 'Vue']; //property
   topicHasError = true;
   submitted=false;
+  errorMsg='';
 
   userModel = new User('', 'Johnson@gmail.com', 7708909786, '', 'Morning', true); //class instance
   name: any;

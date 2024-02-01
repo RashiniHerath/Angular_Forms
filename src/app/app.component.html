@@ -1,5 +1,7 @@
 <div class="container-fluid">
   <h1>Bootcamp Enrollment Form</h1>
+  <div class="alert alert-danger" *ngIf="errorMsg"></div>
+  {{errorMsg}}
   <form #userForm="ngForm" *ngIF="!submitted"(ngSubmit) ="onSubmit()" novalidate>
 
 
